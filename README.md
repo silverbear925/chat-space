@@ -26,7 +26,7 @@ has_many :group, throuth: :users_groups
 has_many :uers_groups
 has_many :user, throuth: :users_groups
 
-##users_groupテーブル
+##users_groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
