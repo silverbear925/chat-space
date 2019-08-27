@@ -19,7 +19,7 @@ has_many :group, throuth: :users_groups
 |------|----|-------|
 |groupname|text|null: false, foreign_key: true|
 |username|string|null: false, foreign_key: true|
-|member|text|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 
 ###Association
 
@@ -34,6 +34,7 @@ has_many :user, throuth: :users_groups
 |group_id|integer|null: false, foreign_key: true|
 
 ###Association
+
 belongs_to :user
 belongs_to :group
 
