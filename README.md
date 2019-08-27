@@ -4,22 +4,21 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|username|sting|null: false, foreign_key: true|
-|password|string|null: false, foreign_key: true|
-|email|string|null: false, foreign_key: true|
+|name|sting|
+
 
 ###Association
 
 has_many :uers_groups
 has_many :group, throuth: :users_groups
+belongs_to :comment
 
 ##groupテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|groupname|string|null: false, foreign_key: true|
-|username|string|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
+|groupname|string|
+
 
 ###Association
 
@@ -30,8 +29,8 @@ has_many :user, throuth: :users_groups
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|reference|null: false, foreign_key: true|
+|group_id|reference|null: false, foreign_key: true|
 
 ###Association
 
@@ -42,9 +41,9 @@ belongs_to :group
 
 |Column|Type|Options|
 |------|----|-------|
-|comment|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|body|text|null: false|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
 
 ###Association
 
