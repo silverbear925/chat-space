@@ -17,7 +17,7 @@ has_many :group, throuth: :users_groups
 
 |Column|Type|Options|
 |------|----|-------|
-|groupname|text|null: false, foreign_key: true|
+|groupname|string|null: false, foreign_key: true|
 |username|string|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 
@@ -73,4 +73,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
