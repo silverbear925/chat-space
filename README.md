@@ -1,54 +1,56 @@
 # README
 
-##userテーブル
+##usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|name|sting|
+|name|sting|null: false, index: true|
 
 
 ###Association
 
 has_many :uers_groups
-has_many :group, throuth: :users_groups
-belongs_to :comment
+has_many :groups, throuth: :users_groups
+has_many :comments
 
-##groupテーブル
+##groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|groupname|string|
+|name|string|null: false|
 
 
 ###Association
 
 has_many :uers_groups
-has_many :user, throuth: :users_groups
+has_many :users, throuth: :users_groups
+has_many :comments
 
 ##users_groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|reference|null: false, foreign_key: true|
-|group_id|reference|null: false, foreign_key: true|
-
-###Association
-
-belongs_to :user
-belongs_to :group
-
-##commentテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|body|text|null: false|
 |user_id|references|null: false, foreign_key: true|
 |group_id|references|null: false, foreign_key: true|
 
 ###Association
 
-belongs_to :user
-belongs_to :group
+belongs_to :users
+belongs_to :groups
+
+##commentsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|body|text|
+|image|string|
+|user_id|references|null: false, foreign_key: true|
+|group_id|references|null: false, foreign_key: true|
+
+###Association
+
+belongs_to :users
+belongs_to :groups
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
