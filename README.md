@@ -9,7 +9,7 @@
 
 ###Association
 
-has_many :uers_groups
+has_many :users_groups
 has_many :groups, throuth: :users_groups
 has_many :comments
 
@@ -22,7 +22,7 @@ has_many :comments
 
 ###Association
 
-has_many :uers_groups
+has_many :users_groups
 has_many :users, throuth: :users_groups
 has_many :comments
 
