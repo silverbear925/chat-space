@@ -44,15 +44,12 @@
             margin-left: 0.3rem;
             .fa.fa-cog{
               color: white;
-            }
+        }
+       }
+      }
+     }
     }
-  }
-    }
-  }
-    
-        
-    
-        
+          
     .groups{
       height: calc(100vh - 100px);
         background-color: #2f3e51;
@@ -67,7 +64,7 @@
     }
     .group__latest-message{
         font-size: 11px;
-    }
+      }
     }
   }
 
@@ -119,7 +116,7 @@
           right: 40px;
           color: #38aef0;
         }
-    }
+       }
 
 .messages{
    height: calc(100vh - 190px);
@@ -150,10 +147,12 @@
       color: #434a54;
       font-size: 14px;
       margin-bottom: 10px; 
+          }
+        }
+      }
     }
   }
 }
-   }}}
  
 .form{
   height: 90px;
@@ -194,7 +193,6 @@
     }
   }
   
-
   .submit-btn{
     width: 100px;
     height: 50px;
@@ -203,8 +201,7 @@
     background-color: #38aef0;
     color: white;
     cursor: pointer;}
-}
-}
-
-}
-}
+     }
+    }
+  }
+} 

@@ -6,10 +6,10 @@
         %p.side-header__box__user-name sample
         %ul.side-header__box__menu
           %li.side-header__box__menu__new-group
-            %a{href:"/groups/new"}
+            =link_to "groups/new" do
               %i.fa.fa-edit
           %li.side-header__box__menu__edit-user
-            %a{href:"/users/252/edit"}
+            =link_to "users/252/edit" do
               %i.fa.fa-cog
       
       
@@ -26,8 +26,8 @@
         %ul.main-header__left-box__member-list
           Member：
         %li.main-header__left-box__member-list__member ssss
-      %a{href:"/groups/383/edit"}
-      .main-header__edit-btn Edit
+      =link_to "groups/383/edit" do
+        .main-header__edit-btn Edit 
     .messages
       .message{"data-message_id": "649"}
         .message__upper-info
