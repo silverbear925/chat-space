@@ -15,13 +15,13 @@
               = fa_icon 'cog', class: 'icon'
                     
     .groups
-      .group
-        - current_user.groups.each do |group|
-          = link_to '#' do
-            %p.group__group-name 
-              = group.name
-            %p.group__latest-message 
-              メッセージはまだありません。
+    - current_user.groups.each do |group|
+      = link_to '#' do
+        .group
+          %p.group__group-name 
+            = group.name
+          %p.group__latest-message 
+            メッセージはまだありません。
           
   .chat-main
     .main-header
@@ -37,7 +37,7 @@
       .message{"data-message_id": "649"}
         .message__upper-info
           %p.message__upper-info__talker
-          %p.message__c 
+          %p.message__c  
         %p.message__text
       
     .form
