@@ -36,7 +36,7 @@
         
           &__new-group{
             margin-left: 0.3rem;
-            .fa.fa-edit{
+            .fa.fa-pencil-square-o{
               color: white;
             }
           }
@@ -61,9 +61,11 @@
     }
     .group__group-name {
           font-size: 15px;
+          color: white;
     }
     .group__latest-message{
         font-size: 11px;
+        color: white;
       }
     }
   }
@@ -124,84 +126,67 @@
     background-color: #fafafa;
     overflow: scroll;
     width: 100%;
-
- .message{
-   padding-bottom: 40px;
+  .message{
+    padding-bottom: 40px;
  
-   &__upper-info{
-    display: flex;
-    margin-bottom: 10px;
-   
-   
-    &__upper-info__talker{
-      color: #434a54;
-      font-size: 16px;
-      font-weight: bold;       
+    .upper-message{
+      display: flex;
+      margin-bottom: 10px;
       
-   &__c{
-      color: #999999;
-      font-size: 12px;
-      margin-left: 10px;
-   
-    &__text{
-      color: #434a54;
-      font-size: 14px;
-      margin-bottom: 10px; 
-          }
-        }
+      &__user-name{
+        color: #434a54;
+        font-size: 16px;
+        font-weight: bold;}
+      
+      &__date{
+        color: #999999;
+        font-size: 12px;
+        margin-left: 10px;}
+      }
+      
+  .lower-message{
+        color: #434a54;
+        font-size: 14px;
+        margin-bottom: 10px; 
       }
     }
   }
-}
- 
-.form{
-  height: 90px;
-  padding: 20px 40px;
-  background-color: #ddd;
 
-  .new_message{
-    display: flex;
-
-    .input-box{
-      position: relative;
-      width: 100%;
-
-      &__text{
-        height: 50px;
-        width: 100%;
-        padding: 0 40px 0 10px;
-        color: #434a54;
+  .form {
+    background-color: #DDDDDD;
+    box-sizing: border-box;
+    height: 90px;
+    padding: 20px 50px 20px 40px;
+    &__message {
+      border: none;
+      float: left;
+      height: 50px;
+      width: calc(100% - 150px);
+    }
+    &__mask {
+      background-color: $white;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
       }
-
-      &__image{
-        font-size: 1.3rem;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-      }
-      .fa.fa-image{
-        display: inline-block;
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: inherit;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-      }
-      .input-box__image__file{
+      .hidden {
         display: none;
       }
     }
-  }
-  
-  .submit-btn{
-    width: 100px;
-    height: 50px;
-    padding: 0 30px;
-    margin-left: 15px;
-    background-color: #38aef0;
-    color: white;
-    cursor: pointer;}
-     }
+    &__submit {
+      background-color: $light_blue;
+      border: none;
+      color: $white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
     }
   }
 } 
+}
+}

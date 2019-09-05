@@ -6,7 +6,7 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
-  # Do not eager load code on boot.
+  # Do not eager load code on boot. 
   config.eager_load = false
 
   # Show full error reports.
@@ -18,7 +18,7 @@ Rails.application.configure do
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      'Cache-Control' => 'public, max-age=172800'
+      'Cache-Control': 'public, max-age=172800'
     }
   else
     config.action_controller.perform_caching = false
