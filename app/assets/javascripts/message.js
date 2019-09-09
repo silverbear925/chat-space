@@ -46,9 +46,9 @@ $('#new_message').on('submit', function(e){
       }
       var html = buildHTML(data);
       $('.messages').append(html);
-      $('#message_content').val('')
-      scrollBottom();
       $("#new_message")[0].reset();
+      scrollBottom();
+      
     })
 
     .fail(function(data){
