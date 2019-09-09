@@ -8,7 +8,7 @@ $(document).on('turbolinks:load', function(){
                       ${message.user_name}
                     </div>
                     <div class= upper-message__date>
-                      ${message.created_at}
+                      ${message.data}
                     </div>
                   </div>
                   <div class= lower-message>
@@ -21,10 +21,11 @@ $(document).on('turbolinks:load', function(){
   return html;
 }
 
+
 $('#new_message').on('submit', function(e){
   e.preventDefault();
   var formData = new FormData(this);
-  var url = (window.location.href);
+  var url =  $(this).attr('action');
 
     $.ajax({  
       url: url,
@@ -47,13 +48,14 @@ $('#new_message').on('submit', function(e){
       $('.messages').append(html);
       $('#message_content').val('')
       scrollBottom();
+      $("#new_message")[0].reset();
     })
 
     .fail(function(data){
       alert('エラーが発生したためメッセージは送信できませんでした。');
     })
-    .always(function(data){
-      $('.form__submit').prop('disabled', false);
-    })
+    .always(() => {
+      $('.form__submit').removeAttr("disabled");
+    });
   })
 })
