@@ -1,10 +1,15 @@
 class MessagesController < ApplicationController
-  before_action :set_group
+  before_action :set_group 
 
   def index
-    @message = Message.new
-    @messages = @group.messages.includes(:user)
-  end
+      @message = Message.new
+      @messages = @group.messages.includes(:user)
+      @newmessages = []
+      respond_to do |format|
+        format.json 
+        format.html
+      end
+    end
 
   def create
     @message = @group.messages.new(message_params)
