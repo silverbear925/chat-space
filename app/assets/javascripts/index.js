@@ -23,7 +23,7 @@ $(document).on('turbolinks:load', function(){
                   <div class='chat-group-user clearfix js-chat-member' id='${userId}'>
                     <input name='group[user_ids][]' type='hidden' value='${userId}'>
                       <p class='chat-group-user__name'>${userName}</p>
-                      <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
+                      <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn" data-user-id=${userId} data-user-name=${userName}'>削除</a>
                 </div>`;
     member_list.append(html);
       }
@@ -43,6 +43,9 @@ $(document).on('turbolinks:load', function(){
             appendUser(user);
           });
         }
+        else if (input.length === 0){
+        }
+
         else {
           appendNoUser("一致するユーザはいません");
         }
