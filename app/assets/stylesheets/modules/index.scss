@@ -38,12 +38,14 @@
             margin-left: 0.3rem;
             .fa.fa-pencil-square-o{
               color: white;
+              font-size: 1.0rem;
             }
           }
           &__edit-user{
             margin-left: 0.3rem;
             .fa.fa-cog{
               color: white;
+              font-size: 1.0rem;
         }
        }
       }
@@ -177,14 +179,14 @@
       }
     }
     &__submit {
-      background-color: $light_blue;
-      border: none;
-      color: $white;
-      float: right;
-      font-size: 16px;
+      width: 100px;
       height: 50px;
-      margin-left: 15px;
       padding: 0 30px;
+      margin-left: 15px;
+      background-color: #38aef0;
+      color: white;
+      cursor: pointer;
+      position: absolute;
     }
   }
 } 
