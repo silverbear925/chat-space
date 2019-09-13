@@ -73,8 +73,8 @@ $('#new_message').on('submit', function(e){
       messages.forEach(function (message) {
         insertHTML = buildHTML(message);
         $('.messages').append(insertHTML);
+        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast')
       })
-      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast')
     })
     .fail(function () {
       alert('自動更新に失敗しました');
